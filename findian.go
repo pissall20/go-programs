@@ -14,5 +14,7 @@ func main() {
 	}
 	if strings.HasPrefix(myString, "i") && strings.HasSuffix(myString, "n") && strings.Contains(myString, "a") {
 		fmt.Println("Found!")
+	} else {
+		fmt.Println("Not Found!")
 	}
 }
