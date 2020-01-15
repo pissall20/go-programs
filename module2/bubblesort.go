@@ -4,9 +4,8 @@ import (
 	"fmt"
 )
 
-
 func Swap(a_slice []int, index int) {
-	a_slice[index], a_slice[index+1] = a_slice[index + 1], a_slice[index]
+	a_slice[index], a_slice[index+1] = a_slice[index+1], a_slice[index]
 }
 
 func BubbleSort(nums []int) {
