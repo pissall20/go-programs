@@ -2,6 +2,10 @@ package main
 
 import (
 	"fmt"
+	"bufio"
+	"strings"
+	"strconv"
+	"os"
 )
 
 func Swap(a_slice []int, index int) {
@@ -20,8 +24,15 @@ func BubbleSort(nums []int) {
 }
 
 func main() {
-	s1 := []int{1, 5, 2, 47, 7, 8, 0, 6, 21}
-
-	BubbleSort(s1)
-	fmt.Println(s1)
+	fmt.Println("Please input numbers separated with space:")
+	reader := bufio.NewReader(os.Stdin)
+	line, _, _ := reader.ReadLine()
+	line_array := strings.Split(string(line), " ")
+	var values []int
+	for _, str := range line_array {
+		num, _ := strconv.Atoi(str)
+		values = append(values, num)	
+	}
+	BubbleSort(values)
+	fmt.Println(values)
 }
