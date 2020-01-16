@@ -36,11 +36,12 @@ func main() {
 		fmt.Scan(&animal)
 		fmt.Print(">")
 		fmt.Scan(&action)
-		if action == "eat" {
+		switch action {
+		case "eat":
 			dict[animal].Eat()
-		} else if action == "move" {
+		case "move":
 			dict[animal].Move()
-		} else if action == "speak" {
+		case "speak":
 			dict[animal].Speak()
 		}
 	}
