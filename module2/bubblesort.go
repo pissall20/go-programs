@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
-	"strings"
-	"strconv"
+	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func Swap(a_slice []int, index int) {
@@ -31,7 +31,7 @@ func main() {
 	var values []int
 	for _, str := range line_array {
 		num, _ := strconv.Atoi(str)
-		values = append(values, num)	
+		values = append(values, num)
 	}
 	BubbleSort(values)
 	fmt.Println(values)

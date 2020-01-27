@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
-	"strings"
+	"fmt"
 	"os"
+	"strings"
 )
 
 // Animal struct {
@@ -16,7 +16,6 @@ type AnimalInterface interface {
 	Move()
 	Speak()
 }
-
 
 type Cow struct {
 	// food, locomotion, noise string
@@ -66,7 +65,6 @@ func (a *Snake) Speak() {
 	fmt.Println("hsss")
 }
 
-
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	dict := make(map[string]AnimalInterface)
@@ -75,7 +73,7 @@ func main() {
 		fmt.Print(">")
 		input, _ := reader.ReadString('\n')
 		split_input := strings.Split(strings.TrimSpace(input), " ")
-		command, animal, action := split_input[0], split_input[1], split_input[2] 
+		command, animal, action := split_input[0], split_input[1], split_input[2]
 		switch command {
 		case "newanimal":
 			switch action {
@@ -101,6 +99,6 @@ func main() {
 			} else {
 				fmt.Println("Not found. Please add the animal with 'newanimal'")
 			}
-		} 
+		}
 	}
 }

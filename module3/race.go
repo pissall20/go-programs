@@ -23,7 +23,7 @@ func main() {
 
 		/*
 		  A Race condition occurs when multiple threads are trying to access and manipulate the same variable.
-		  The code below are all accessing and changing the same value.  Divide x (100) by y (5) 
+		  The code below are all accessing and changing the same value.  Divide x (100) by y (5)
 		  Except if y is not assigned 5 before x is assigned 100, y's initialized/zero value of 0 is used,
 		  Due to the uncertainty of Goroutine scheduling mechanism, the results of the following program is unpredictable,
 		  which causes a divide by zero exception.

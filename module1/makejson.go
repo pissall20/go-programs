@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"encoding/json"
+	"fmt"
 )
 
 func main() {
 	data := make(map[string]string)
-	var name, address string 
+	var name, address string
 	fmt.Println("Please enter the name:")
 	fmt.Scan(&name)
 

@@ -1,9 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 	"strings"
 )
 
@@ -29,7 +29,7 @@ func (n *Name) Set(firstName, lastName string) {
 	}
 }
 
-func main(){
+func main() {
 	nameSlice := make([]Name, 0)
 
 	var fileName string
